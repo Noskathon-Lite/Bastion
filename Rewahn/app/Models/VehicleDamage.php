@@ -6,17 +6,17 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- *
+ * 
  *
  * @property int $id
  * @property int $vehicle_id
- * @property int $reported_by
+ * @property int $user_id
  * @property string $description
  * @property string $status
  * @property string|null $images
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @property-read \App\Models\User|null $user
+ * @property-read \App\Models\User $user
  * @property-read \App\Models\Vehicle $vehicle
  * @method static \Database\Factories\VehicleDamageFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|VehicleDamage newModelQuery()
@@ -26,9 +26,9 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|VehicleDamage whereDescription($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|VehicleDamage whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|VehicleDamage whereImages($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|VehicleDamage whereReportedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|VehicleDamage whereStatus($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|VehicleDamage whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|VehicleDamage whereUserId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|VehicleDamage whereVehicleId($value)
  * @mixin \Eloquent
  */

@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Model;
  *
  * @property int $id
  * @property int $rental_id
- * @property int $reported_by
+ * @property int $user_id
  * @property string $type
  * @property string $description
  * @property string $status
@@ -18,7 +18,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \App\Models\Rental $rental
- * @property-read \App\Models\User|null $user
+ * @property-read \App\Models\User $user
  * @method static \Database\Factories\RentalDisputeFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|RentalDispute newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|RentalDispute newQuery()
@@ -27,11 +27,11 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|RentalDispute whereDescription($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|RentalDispute whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|RentalDispute whereRentalId($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|RentalDispute whereReportedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|RentalDispute whereResolution($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|RentalDispute whereStatus($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|RentalDispute whereType($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|RentalDispute whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RentalDispute whereUserId($value)
  * @mixin \Eloquent
  */
 class RentalDispute extends Model

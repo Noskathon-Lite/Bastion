@@ -6,12 +6,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- *
+ * 
  *
  * @property int $id
  * @property int $vehicle_id
  * @property string $image_path
- * @property bool $is_primary
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \App\Models\Vehicle $vehicle
@@ -22,7 +21,6 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|VehicleImage whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|VehicleImage whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|VehicleImage whereImagePath($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|VehicleImage whereIsPrimary($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|VehicleImage whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|VehicleImage whereVehicleId($value)
  * @mixin \Eloquent

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- *
+ * 
  *
  * @property int $id
  * @property int $user_id
@@ -21,7 +21,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $status
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @property-read \App\Models\VehicleCategory|null $category
+ * @property-read \App\Models\VehicleCategory $category
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\VehicleDamage> $damages
  * @property-read int|null $damages_count
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\GeoFence> $geoFences
