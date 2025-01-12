@@ -76,7 +76,7 @@ class Vehicle extends Model
 
     public function category()
     {
-        return $this->belongsTo(VehicleCategory::class, "vehicle_category_id");
+        return $this->belongsTo(VehicleCategory::class, "category_id");
     }
 
     public function damages()
