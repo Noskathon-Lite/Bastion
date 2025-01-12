@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Vehicle;
 use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'welcome');
@@ -14,9 +15,11 @@ Route::view('profile', 'profile')
 
 require __DIR__.'/auth.php';
 
-Route::view('vehicle', 'Vehicle.create')->name('vehicle');
-Route::view('vehicle/view', 'vehicle.vehicle-view')->name('vehicle.view');
+
+require __DIR__.'/vehicle.php';
+
+
 
 Route::view('vehicle/category', 'VehicleCategory.create')->name('vehicle-category');
 
-Route::view('vehicle/rent', 'Rental.create')->name('vehicle-');
+Route::view('vehicle/rent', 'Rental.create')->name('vehicle-rent');

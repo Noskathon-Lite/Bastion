@@ -7,6 +7,10 @@
     <div class="py-12">
         <livewire:forms.vehicle-category-form />
     </div>
-
+    <div class="py-4">
+        <a href="{{ route('vehicle.view') }}" class="btn btn-primary">
+            Go to Vehicle View
+        </a>
+    </div>
 </x-app-layout>
 

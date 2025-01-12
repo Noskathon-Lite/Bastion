@@ -5,11 +5,11 @@
     @endif
 
     <form wire:submit.prevent="save">
-{{--        <div>--}}
-{{--            <label for="user_id">User ID</label>--}}
-{{--            <input type="text" id="user_id" wire:model="user_id">--}}
-{{--            @error('user_id') <span class="error">{{ $message }}</span> @enderror--}}
-{{--        </div>--}}
+        <div>
+            <input type="hidden" id="user_id" wire:model="user_id">
+            @error('user_id') <span class="error">{{ $message }}</span> @enderror
+        </div>
+
 
         <div>
             <label for="category_id">Category</label>
@@ -57,7 +57,7 @@
             <select id="gps_type" wire:model="gps_type">
                 <option value="">Select Type</option>
                 <option value="mobile">Mobile</option>
-                <option value="vehicle">Vehicle</option>
+                <option value="vehicle">IOT</option>
             </select>
             @error('gps_type') <span class="error">{{ $message }}</span> @enderror
         </div>

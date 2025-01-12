@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Forms;
 
+use App\Models\VehicleCategory;
 use Livewire\Component;
 use App\Models\Vehicle;
 
@@ -12,12 +13,12 @@ class VehicleFormEdit extends Component
     public $category_id;
     public $title;
     public $description;
-    public $base_price;
     public $daily_rate;
     public $fuel_capacity;
     public $gps_enabled = true;
     public $gps_type;
     public $status = 'available';
+    public $categories=[];
 
     // Validation rules
     protected $rules = [
@@ -25,7 +26,6 @@ class VehicleFormEdit extends Component
         'category_id' => 'required|exists:vehicle_categories,id',
         'title' => 'required|string|max:255',
         'description' => 'required|string',
-        'base_price' => 'required|numeric|min:0',
         'daily_rate' => 'required|numeric|min:0',
         'fuel_capacity' => 'required|numeric|min:0',
         'gps_enabled' => 'boolean',
@@ -36,14 +36,13 @@ class VehicleFormEdit extends Component
     public function mount($id)
     {
         $vehicle = Vehicle::findOrFail($id);
-
+        $this->categories = VehicleCategory::all();
         // Populate properties with vehicle data
         $this->vehicleId = $vehicle->id;
         $this->user_id = $vehicle->user_id;
         $this->category_id = $vehicle->category_id;
         $this->title = $vehicle->title;
         $this->description = $vehicle->description;
-        $this->base_price = $vehicle->base_price;
         $this->daily_rate = $vehicle->daily_rate;
         $this->fuel_capacity = $vehicle->fuel_capacity;
         $this->gps_enabled = $vehicle->gps_enabled;
@@ -62,7 +61,6 @@ class VehicleFormEdit extends Component
             'category_id' => $this->category_id,
             'title' => $this->title,
             'description' => $this->description,
-            'base_price' => $this->base_price,
             'daily_rate' => $this->daily_rate,
             'fuel_capacity' => $this->fuel_capacity,
             'gps_enabled' => $this->gps_enabled,
