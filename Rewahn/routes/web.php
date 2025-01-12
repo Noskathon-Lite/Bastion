@@ -18,3 +18,5 @@ Route::view('vehicle', 'Vehicle.create')->name('vehicle');
 Route::view('vehicle/view', 'vehicle.vehicle-view')->name('vehicle.view');
 
 Route::view('vehicle/category', 'VehicleCategory.create')->name('vehicle-category');
+
+Route::view('vehicle/rent', 'Rental.create')->name('vehicle-');

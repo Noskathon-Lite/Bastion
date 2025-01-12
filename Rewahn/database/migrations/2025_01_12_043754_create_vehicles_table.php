@@ -19,11 +19,10 @@ return new class extends Migration {
                 ->onDelete("cascade");
             $table->string("title");
             $table->text("description");
-            $table->decimal("base_price", 10, 2);
             $table->decimal("daily_rate", 10, 2);
             $table->decimal("fuel_capacity", 8, 2);
             $table->boolean("gps_enabled")->default(false);
-            $table->enum("gps_type", ["mobile", "vehicle"])->nullable();
+            $table->enum("gps_type", ["mobile", "iot"])->nullable();
             $table
                 ->enum("status", [
                     "available",

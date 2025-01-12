@@ -34,11 +34,6 @@
             @error('description') <span class="error">{{ $message }}</span> @enderror
         </div>
 
-        <div>
-            <label for="base_price">Base Price</label>
-            <input type="text" id="base_price" wire:model="base_price">
-            @error('base_price') <span class="error">{{ $message }}</span> @enderror
-        </div>
 
         <div>
             <label for="daily_rate">Daily Rate</label>
