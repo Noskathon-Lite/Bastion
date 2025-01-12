@@ -26,5 +26,4 @@
         <button type="submit" class="btn btn-primary">Save</button>
     </form>
 </div>
- {{-- Close your eyes. Count to one. That is how long forever feels. --}}
 </div>

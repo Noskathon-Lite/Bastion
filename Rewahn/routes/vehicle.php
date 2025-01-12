@@ -27,4 +27,4 @@ Route::get('vehicle/view', function () {
 
     // Pass vehicles to the view
     return view('Vehicle.view', compact('vehicles'));
-})->name('vehicle.view');
+})->name('vehicle.viewall');

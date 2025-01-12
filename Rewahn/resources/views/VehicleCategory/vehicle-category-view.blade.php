@@ -8,5 +8,4 @@
 
     <a href="{{ route('vehicle-categories.edit', $category->id) }}" class="btn btn-warning">Edit Category</a>
 </div>
-{{-- Do your work, then step back. --}}
 </div>
