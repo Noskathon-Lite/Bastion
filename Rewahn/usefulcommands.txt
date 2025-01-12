@@ -3,3 +3,6 @@ php artisan ide-helper:generate
 
 
 <livewire:vehicle-edit :id="$vehicleId" />
+
+
+<livewire:vehicle-view :id="$vehicleId" />

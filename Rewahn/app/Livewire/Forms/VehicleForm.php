@@ -3,6 +3,7 @@
 namespace App\Livewire\Forms;
 
 use Livewire\Component;
+use App\Models\Vehicle;
 
 class VehicleForm extends Component
 {
