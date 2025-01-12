@@ -1,2 +1,5 @@
+@extends('layouts.app')
 
-<livewire:forms.vehicle-form />
+@section('content')
+    <livewire:vehicle-form />
+@endsection
