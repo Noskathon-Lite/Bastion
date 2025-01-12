@@ -34,7 +34,7 @@ class VehicleImage extends Model
 
     protected $fillable = ["vehicle_id", "image_path"];
 
-    public function vehicle
+    public function vehicle()
     {
         return $this->belongsTo(Vehicle::class);
     }
