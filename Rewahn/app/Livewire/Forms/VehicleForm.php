@@ -58,6 +58,7 @@ class VehicleForm extends Component
 
         session()->flash('success', 'Vehicle added successfully!');
         $this->reset();
+        return redirect()->route('vehicle.view');
     }
     public function render()
     {

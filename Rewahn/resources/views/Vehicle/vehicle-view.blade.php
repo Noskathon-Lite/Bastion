@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl  text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Vehicle Edit') }}
+            {{ __('Vehicle view') }}
         </h2>
     </x-slot>
 
@@ -31,6 +31,10 @@
                 @csrf
                 @method('DELETE')
                 <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
+            <form action="{{ route('vehicle.edit', $vehicle->id) }}"  style="display:inline;">
+                @csrf
+                <button type="submit" class="btn btn-danger">EDIT</button>
             </form>
         </div>
     </div>
