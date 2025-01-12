@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Forms;
 
+use App\Models\VehicleCategory;
 use Livewire\Component;
 use App\Models\Vehicle;
 
@@ -18,6 +19,12 @@ class VehicleForm extends Component
     public $gps_type;
     public $status = 'available';
     public $categories = [];
+
+    public function mount()
+    {
+        // Fetch the categories and populate the $categories property
+        $this->categories = VehicleCategory::all();
+    }
 
     protected $rules = [
         'user_id' => 'required|exists:users,id',

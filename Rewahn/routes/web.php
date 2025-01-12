@@ -14,5 +14,7 @@ Route::view('profile', 'profile')
 
 require __DIR__.'/auth.php';
 
-Route::view('vehicle', 'vehicle.create')->name('vehicle');
+Route::view('vehicle', 'Vehicle.create')->name('vehicle');
 Route::view('vehicle/view', 'vehicle.vehicle-view')->name('vehicle.view');
+
+Route::view('vehicle/category', 'VehicleCategory.create')->name('vehicle-category');
