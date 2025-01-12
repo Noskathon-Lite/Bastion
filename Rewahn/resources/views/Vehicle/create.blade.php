@@ -1,0 +1,2 @@
+
+<livewire:forms.vehicle-form />
