@@ -31,4 +31,16 @@ Route::get('category/view', function () {
     })->name('vehicle-category.viewall');
 
 
+Route::delete('vehicleDamage/delete/{id}', function ($id) {
+    // Find the vehicle by ID or show a 404 page if not found
+    $vehicle = Vehicle::findOrFail($id);
+
+    // Delete the vehicle
+    $vehicle->delete();
+
+    // Redirect back with a success message
+    return redirect()->route('vehicle', $id)->with('success', 'vehicle deleted successfully.');
+})->name('damage.delete');
+
+
 Route::view('vehicle/rent', 'Rental.create')->name('vehicle-rent');
