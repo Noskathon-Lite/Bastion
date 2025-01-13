@@ -68,7 +68,7 @@ class VehicleFormEdit extends Component
             'status' => $this->status,
         ]);
 
-        session()->flash('success', 'Vehicle updated successfully.');
+        session()->flash('success', 'vehicle updated successfully.');
     }
     public function render()
     {

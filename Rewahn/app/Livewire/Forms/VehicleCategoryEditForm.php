@@ -34,9 +34,9 @@ class VehicleCategoryEditForm extends Component
             'name' => $this->name,
             'min_price' => $this->min_price,
             'max_price' => $this->max_price,
-        ]); 
+        ]);
 
-        session()->flash('message', 'Vehicle category updated successfully.');
+        session()->flash('message', 'vehicle category updated successfully.');
     }
 
     public function render()

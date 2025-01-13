@@ -29,7 +29,7 @@ class VehicleCategoryForm extends Component
             'max_price' => $this->max_price,
         ]);
 
-        session()->flash('message', 'Vehicle category added successfully.');
+        session()->flash('message', 'vehicle category added successfully.');
         $this->reset(); // Clear the form after submission
     }
     public function render()

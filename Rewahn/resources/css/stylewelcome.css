@@ -8,7 +8,7 @@
 /* Container Styling
 .container {
     font-family: Arial, sans-serif;
-    
+
     background-color:  #b6c0b5;
 }
 
@@ -16,26 +16,26 @@
 
 /* Header Section */
 .header {
-    
+
     text-align: center;
     padding: 20px;
     background-color:#29392E;
-    filter:saturate(1.5); 
+    filter:saturate(1.5);
     border-radius: 0px 0px 8px 8px;
     margin-bottom: 20px;
 
 }
 
 .logo {
-    
-   
+
+
     font-weight: bold;
     margin-bottom: 10px;
     margin-left: -50px;
     margin-right: 110vh;
     background-color:#29392E;
     text-decoration: none;
- 
+
 }
 
 .logo span {
@@ -63,7 +63,7 @@
     gap: 10px;
     margin-left: 140vh;
     margin-top: -50px;
-  
+
 }
 
 .search-input {
@@ -139,7 +139,7 @@
     box-shadow: 0px 3px px rgba(0, 0, 0, 0.2);
     border-radius: 8px 8px 0px 0px;
     transform: scale(1.05);
-    
+
 }
 
 /* Add hover effect for menu underline */
@@ -163,7 +163,7 @@
 
 .img-context {
     position: absolute; /* Allow for positioning relative to the nearest positioned ancestor */
-   
+
     transform: translate(-50%, -50%); /* Adjust position to truly center */
     z-index: 10; /* Ensure it appears above the image */
     display: flex; /* Optional: Use flexbox for alignment */
@@ -210,7 +210,7 @@ margin-right: -80vh;
 
 
 /* boody css start here */
-/* Vehicle Listing Section */
+/* vehicle Listing Section */
 .vehicle-listing {
     margin-top: 20px;
 }
@@ -228,7 +228,7 @@ margin-right: -80vh;
     padding: 10px;
 }
 
-/* Vehicle Card */
+/* vehicle Card */
 .vehicle-card {
     background-color: #29392E;
     border: 1px solid #ddd;
@@ -283,4 +283,4 @@ margin-right: -80vh;
     font-size: 1.2rem;
     margin-top: 20px;
     color: #555;
-} 
+}

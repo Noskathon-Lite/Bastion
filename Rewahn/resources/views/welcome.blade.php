@@ -62,11 +62,11 @@
         </p><div id="nextline">Your Perfect Vehicle with</div>  <div class="rawahn">Rewahn</div>
 
 </div><img src="{{ asset('storage/' . 'Images/home/ed-259-270914-unsplash.jpg') }}" alt="Image">
-        <!-- Vehicle Listing Section -->
+        <!-- vehicle Listing Section -->
         <section class="vehicle-listing" id="rent">
             <h1 class="section-title">Available Vehicles</h1>
             <div class="vehicle-cards">
-                <!-- Vehicle Card 1 -->
+                <!-- vehicle Card 1 -->
                 <div class="vehicle-card">
                     <img src="../../storage/app/public/Images/home/car-removebg-preview.png" alt="Vehicle" class="vehicle-image">
                     <h3 class="vehicle-name">SUV Car</h3>
@@ -74,7 +74,7 @@
                     <button class="rent-button">Rent Now</button>
                 </div>
 
-                <!-- Vehicle Card 2 -->
+                <!-- vehicle Card 2 -->
                 <div class="vehicle-card">
                     <img src="../../storage/app/public/Images/home/truck-removebg-preview.png" alt="Vehicle" class="vehicle-image">
                     <h3 class="vehicle-name">Truck</h3>
@@ -82,7 +82,7 @@
                     <button class="rent-button">Rent Now</button>
                 </div>
 
-                <!-- Vehicle Card 3 -->
+                <!-- vehicle Card 3 -->
                 <div class="vehicle-card">
                     <img src="../../storage/app/public/Images/home/bike-removebg-preview.png" alt="Vehicle" class="vehicle-image">
                     <h3 class="vehicle-name">Motorbike</h3>
