@@ -32,15 +32,15 @@
 
                     <main class="mt-6">
                     <div class="container">
-        <!-- header  -->       
+        <!-- header  -->
         <!-- Header Section -->
         <header class="header" id="home">
-            
+
             <div class="logo">  <a href="index.html">Rewahn</a>
                 <p>embrace the Road, your Way</p></div>
         </a>
-        
-            
+
+
             <div class="search-bar">
                 <input type="text" placeholder="Search for vehicles..." class="search-input">
                 <button class="search-button">Search</button>
@@ -61,7 +61,7 @@
     <p>"Your Next Escape Starts Here!
         </p><div id="nextline">Your Perfect Vehicle with</div>  <div class="rawahn">Rewahn</div>
 
-</div><img src="/Resources/ed-259-270914-unsplash.jpg" class="img" alt="scenario">
+</div><img src="/storage/app/public/Images/home/ed-259-270914-unsplash.jpg" class="img" alt="scenario">
 
 
         <!-- Vehicle Listing Section -->
@@ -70,7 +70,7 @@
             <div class="vehicle-cards">
                 <!-- Vehicle Card 1 -->
                 <div class="vehicle-card">
-                    <img src="./Resources/car-removebg-preview.png" alt="Vehicle" class="vehicle-image">
+                    <img src="../../storage/app/public/Images/home/car-removebg-preview.png" alt="Vehicle" class="vehicle-image">
                     <h3 class="vehicle-name">SUV Car</h3>
                     <p class="vehicle-price">$50/day</p>
                     <button class="rent-button">Rent Now</button>
@@ -78,7 +78,7 @@
 
                 <!-- Vehicle Card 2 -->
                 <div class="vehicle-card">
-                    <img src="./Resources/truck-removebg-preview.png" alt="Vehicle" class="vehicle-image">
+                    <img src="../../storage/app/public/Images/home/truck-removebg-preview.png" alt="Vehicle" class="vehicle-image">
                     <h3 class="vehicle-name">Truck</h3>
                     <p class="vehicle-price">$80/day</p>
                     <button class="rent-button">Rent Now</button>
@@ -86,7 +86,7 @@
 
                 <!-- Vehicle Card 3 -->
                 <div class="vehicle-card">
-                    <img src="./Resources/bike-removebg-preview.png" alt="Vehicle" class="vehicle-image">
+                    <img src="../../storage/app/public/Images/home/bike-removebg-preview.png" alt="Vehicle" class="vehicle-image">
                     <h3 class="vehicle-name">Motorbike</h3>
                     <p class="vehicle-price">$30/day</p>
                     <button class="rent-button">Rent Now</button>
