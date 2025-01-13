@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\RentalController;
+use App\Http\Livewire\RentedVehicles;
 use App\Livewire\Show\VehicleView;
 use App\Models\Vehicle;
 
@@ -34,3 +34,5 @@ Route::delete('vehicle/delete/{id}', function ($id) {
 })->name('vehicle.viewall');*/
 
 Route::get('vehicle', VehicleView::class)->name('vehicle.index');
+
+

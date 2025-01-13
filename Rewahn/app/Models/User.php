@@ -99,4 +99,10 @@ class User extends Authenticatable
     {
         return $this->hasMany(RentalDispute::class);
     }
+
+    public function kycDocuments()
+    {
+        return $this->hasMany(KycDocument::class);
+    }
+
 }

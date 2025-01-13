@@ -14,6 +14,8 @@
             </div>
 
             <livewire:personal-vehicle-listing />
+
+            <livewire:rented-vehicles />
         </div>
     </div>
 </x-app-layout>

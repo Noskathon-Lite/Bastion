@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Livewire\KycAdmin;
+use App\Http\Livewire\KycUpload;
+use App\Http\Livewire\RentedVehicles;
 use App\Models\Vehicle;
 use App\Models\VehicleCategory;
 use Illuminate\Support\Facades\Route;
@@ -44,3 +47,7 @@ Route::delete('vehicleDamage/delete/{id}', function ($id) {
 
 
 Route::view('rent', 'Rental.create')->name('rent.index');
+
+
+ //   Route::get('/kyc/upload', KycUpload::class)->name('kyc.upload');
+   // Route::get('/admin/kyc', KycAdmin::class)->name('admin.kyc');
