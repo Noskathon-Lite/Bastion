@@ -1,41 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&family=Roboto+Slab:wght@100..900&display=swap');
+
 /* General Reset */
 * {
+    font-family: "Roboto Slab", serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-/* Container Styling
-.container {
-    font-family: Arial, sans-serif;
-
-    background-color:  #b6c0b5;
+   
 }
 
 
 
 /* Header Section */
 .header {
-
+    
     text-align: center;
     padding: 20px;
     background-color:#29392E;
-    filter:saturate(1.5);
-    border-radius: 0px 0px 8px 8px;
+    filter:saturate(1.5); 
+    /* border-radius: 0px 0px 8px 8px; */
     margin-bottom: 20px;
+   
 
 }
 
 .logo {
-
-
+    
+   
     font-weight: bold;
     margin-bottom: 10px;
     margin-left: -50px;
     margin-right: 110vh;
     background-color:#29392E;
     text-decoration: none;
-
+ 
 }
 
 .logo span {
@@ -44,11 +42,13 @@
 
 }
 .logo a{
+    
     font-size: 2.5rem;
     color:#EFFFFC;
     text-decoration: none;
 }
 .logo p{
+    font-family: "Playwrite AU SA", serif;
     color: #cce5ff;
     text-decoration: overline;
     font: 0.7rem;
@@ -63,7 +63,7 @@
     gap: 10px;
     margin-left: 140vh;
     margin-top: -50px;
-
+  
 }
 
 .search-input {
@@ -90,7 +90,6 @@
 }
 
 .navbar {
-    font-family: Arial, sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -118,7 +117,6 @@
 
 .menu li a {
     text-decoration: none;
-    font-family: Arial, sans-serif;
     color: #F7FBFE;
     font-size: 1.5rem;
     font-weight: bold;
@@ -139,7 +137,7 @@
     box-shadow: 0px 3px px rgba(0, 0, 0, 0.2);
     border-radius: 8px 8px 0px 0px;
     transform: scale(1.05);
-
+    
 }
 
 /* Add hover effect for menu underline */
@@ -163,7 +161,7 @@
 
 .img-context {
     position: absolute; /* Allow for positioning relative to the nearest positioned ancestor */
-
+   
     transform: translate(-50%, -50%); /* Adjust position to truly center */
     z-index: 10; /* Ensure it appears above the image */
     display: flex; /* Optional: Use flexbox for alignment */
@@ -172,33 +170,35 @@
 }
 
 .img-context p {
-    position:absolute;
+    /* position:absolute; */
     color: #ccc;
-    font-size: 2rem;
+    font-size: 4.2rem;
     /* text-align: center;  */
-    margin-top: 40vh;
-margin-right: -80vh;
+    margin-top: 25vh;
+    margin-right: -190vh;
+    margin-left: -50px;
 }
-.img-context #nextline{
-   margin-top: 50vh;
-   font-size: 4rem;
-    color: #ccc;
-}
-.rawahn{
-    color: #ccc;
-    font-size: 4rem;
+
+.rawahan{
+    position: absolute;
+    color:#245029 ;
+    font-size: 7rem;
     align-items: center;
-    margin-right: -200vh;
-    margin-top: 90vh;
+    margin-right: -190vh;
+    margin-top: 65vh;
+    filter: saturate(5);
+
 
 }
 
 
 .img{
-    position: relative;
+    
+    /* position: absolute; */
+    object-fit: cover;
     border-radius: 20;
     height: 990px;
-    width: 2800px;
+    width: 100%;
     /* display: center; */
     /* margin-left: 15vh; */
    margin-top: -1.4vh;
@@ -210,15 +210,16 @@ margin-right: -80vh;
 
 
 /* boody css start here */
-/* vehicle Listing Section */
+/* Vehicle Listing Section */
 .vehicle-listing {
     margin-top: 20px;
 }
 
 .section-title {
-    font-size: 3rem;
+    font-size: 5rem;
     text-align: center;
     margin-bottom: 20px;
+    margin-top: 5px;
 }
 
 .vehicle-cards {
@@ -228,7 +229,7 @@ margin-right: -80vh;
     padding: 10px;
 }
 
-/* vehicle Card */
+/* Vehicle Card */
 .vehicle-card {
     background-color: #29392E;
     border: 1px solid #ddd;
@@ -247,8 +248,8 @@ margin-right: -80vh;
 }
 
 .vehicle-name {
-    font-size: 1.5rem;
-    color:lightgreen;
+    font-size: 3.5rem;
+    color:rgb(255, 255, 255);
     margin-bottom: 10px;
 }
 
@@ -259,28 +260,145 @@ margin-right: -80vh;
 }
 
 .rent-button {
+    height: 60px;
+    width: 210px;
     padding: 10px 20px;
     background-color:#63B36C ;
     color: white;
     border: none;
-    border-radius: 5px;
-    font-size: 1rem;
+    border-radius: 8px;
+    font-size: 2rem;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 .rent-button:hover {
-    background-color:  #4C864C;
+    background-color:  #3a613a;
 }
 
-/* Services Section */
-.services {
+/* features Section */
+.features {
+    
     text-align: center;
     margin-top: 40px;
 }
 
-.services-description {
+.features-description {
+    height: 1000px;
+    width: 100%;
+    object-fit: cover;
+    background-color: #333;
     font-size: 1.2rem;
     margin-top: 20px;
     color: #555;
+} 
+.whyus{
+    width: 140vh;
+    height:770px;
+    filter: saturate(1.7);
+
 }
+
+
+footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 40px 20px;
+}
+
+.container2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-sections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 20vh;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-section p, 
+.footer-section ul {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.social-icons, .app-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-icons a img, .app-icons a img {
+    width: 30px;
+    height: auto;
+}
+
+.app-icons a img {
+    width: 120px;
+}
+
+hr {
+    width: 100%;
+    border: 0;
+    border-top: 1px solid #333;
+    margin: 20px 0;
+}
+
+.footer-bottom {
+    text-align: center;
+}
+
+.footer-bottom a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+.certifications img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+
+
+
+
+
+
