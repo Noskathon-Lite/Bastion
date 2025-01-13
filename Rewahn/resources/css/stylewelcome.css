@@ -283,21 +283,50 @@
     margin-top: 40px;
 }
 
-.features-description {
-    height: 1000px;
-    width: 100%;
-    object-fit: cover;
-    background-color: #333;
-    font-size: 1.2rem;
-    margin-top: 20px;
-    color: #555;
-} 
-.whyus{
-    width: 140vh;
-    height:770px;
-    filter: saturate(1.7);
-
+.features2 {
+    position: relative;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
+
+.whyus {
+
+    width: 800px;
+    height: 770px;
+    filter: saturate(2);
+}
+
+.features-text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: 50vh;
+ 
+   
+    padding: 1rem;
+    border-radius: 8px;
+    max-width: 90%;
+}
+
+.features-list {
+    color: #4C864C;
+    text-align: left;
+    font-size: 1rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.features-list li {
+    margin-bottom: 0.5rem;
+}
+
+.features-list li strong {
+    color: #f8f8f8;
+}
+
 
 
 footer {

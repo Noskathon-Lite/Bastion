@@ -93,16 +93,23 @@
         </section>
 
       <!-- features Section -->
-      <section class="features" id="section2" >
-            <h2 class="section-title">WHY US!</h2>
-            
+      <section class="features" id="section2">
+    <h2 class="section-title">WHY US!</h2>
 
-            <p class="features-description">
-                <img class="whyus" src="{{ asset('storage/Images/home/whyus.png') }}">
+    <div class="features2">
+        <img class="whyus" src="{{ asset('storage/Images/home/whyus.png') }}" >
+        <div class="features-text-overlay">
+            <ul class="features-list">
+                <li><strong>Verified Users:</strong> KYC ensures safe and reliable transactions.</li>
+                <li>Clear damage reports, fair pricing, and detailed legal agreements.</li>
+                <li>Flexible and privacy-conscious tracking with geofencing for added security.</li>
+                <li>An intuitive interface for smooth communication and hassle-free rentals.</li>
+                <li>Built with Laravel and Livewire for performance and reliability, with a mobile app in the pipeline.</li>
+            </ul>
+        </div>
+    </div>
+</section>
 
-               
-            </p>
-        </section>
     </div>
                     </main>
 
