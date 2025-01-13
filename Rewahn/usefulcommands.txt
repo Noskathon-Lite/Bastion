@@ -6,3 +6,8 @@ php artisan ide-helper:generate
 
 
 <livewire:vehicle-view :id="$vehicleId" />
+
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/vehicle-damages', \App\Http\Livewire\VehicleDamage::class)->name('vehicle-damages');
+});
