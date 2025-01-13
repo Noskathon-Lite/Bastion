@@ -31,9 +31,12 @@ class VehicleImage extends Model
     use HasFactory;
 
     protected $fillable = ["vehicle_id", "image_path"];
-
+    protected $casts = [
+        'image_path' => 'array', // Handle JSON field as an array
+    ];
     public function vehicle()
     {
         return $this->belongsTo(Vehicle::class);
     }
+    
 }

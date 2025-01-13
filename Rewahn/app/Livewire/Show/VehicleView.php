@@ -1,5 +1,5 @@
 <?php
-
+ 
 namespace App\Livewire\Show;
 
 use Livewire\Component;
