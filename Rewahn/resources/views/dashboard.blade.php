@@ -13,6 +13,7 @@
                 </div>
             </div>
 
+            <livewire:personal-vehicle-listing />
         </div>
     </div>
 </x-app-layout>

@@ -6,22 +6,34 @@
     </x-slot>
 
     <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-        <!-- Vehicle Details Card -->
-        <div class="bg-white dark:bg-gray-800 shadow-sm rounded-lg mb-6">
-            <div class="p-6 border-b border-gray-200 dark:border-gray-700">
-                <h2 class="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-4">Vehicle Details</h2>
-                <p><strong>Name:</strong> {{ $vehicle->title }}</p>
-                <p><strong>Description:</strong> {{ $vehicle->description }}</p>
-                <p><strong>Base Price:</strong> ${{ number_format($vehicle->base_price, 2) }}</p>
-                <p><strong>Daily Rate:</strong> ${{ number_format($vehicle->daily_rate, 2) }}</p>
-                <p><strong>Fuel Capacity:</strong> {{ number_format($vehicle->fuel_capacity, 2) }} liters</p>
-                <p><strong>GPS Enabled:</strong> {{ $vehicle->gps_enabled ? 'Yes' : 'No' }}</p>
-                <p><strong>GPS Type:</strong> {{ $vehicle->gps_type ?? 'N/A' }}</p>
-                <p><strong>Status:</strong> {{ ucfirst($vehicle->status) }}</p>
-                <p><strong>Category:</strong> {{ $vehicle->category->name }}</p>
-                <p><strong>User ID:</strong> {{ $vehicle->user_id }}</p>
-                <p><strong>Created At:</strong> {{ $vehicle->created_at->format('Y-m-d H:i:s') }}</p>
-                <p><strong>Updated At:</strong> {{ $vehicle->updated_at->format('Y-m-d H:i:s') }}</p>
+        <!-- Flex container for Vehicle Details and Rental Form -->
+        <div class="flex flex-wrap gap-6">
+
+            <!-- Vehicle Details Card -->
+            <div class="bg-white dark:bg-gray-800 shadow-sm rounded-lg w-full lg:w-2/3 mb-6">
+                <div class="p-6 border-b border-gray-200 dark:border-gray-700">
+                    <h2 class="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-4">Vehicle Details</h2>
+                    <p><strong>Name:</strong> {{ $vehicle->title }}</p>
+                    <p><strong>Description:</strong> {{ $vehicle->description }}</p>
+                    <p><strong>Base Price:</strong> ${{ number_format($vehicle->base_price, 2) }}</p>
+                    <p><strong>Daily Rate:</strong> ${{ number_format($vehicle->daily_rate, 2) }}</p>
+                    <p><strong>Fuel Capacity:</strong> {{ number_format($vehicle->fuel_capacity, 2) }} liters</p>
+                    <p><strong>GPS Enabled:</strong> {{ $vehicle->gps_enabled ? 'Yes' : 'No' }}</p>
+                    <p><strong>GPS Type:</strong> {{ $vehicle->gps_type ?? 'N/A' }}</p>
+                    <p><strong>Status:</strong> {{ ucfirst($vehicle->status) }}</p>
+                    <p><strong>Category:</strong> {{ $vehicle->category->name }}</p>
+                    <p><strong>User ID:</strong> {{ $vehicle->user_id }}</p>
+                    <p><strong>Created At:</strong> {{ $vehicle->created_at->format('Y-m-d H:i:s') }}</p>
+                    <p><strong>Updated At:</strong> {{ $vehicle->updated_at->format('Y-m-d H:i:s') }}</p>
+                </div>
+            </div>
+
+            <!-- Livewire Rental Form Section (Right of Vehicle Details) -->
+            <div class="w-full lg:w-1/3 mb-6">
+                <div class="bg-white dark:bg-gray-800 shadow-sm rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-4">Rent This Vehicle</h3>
+                    <livewire:forms.rental-form :vehicle_id="$vehicle->id" />
+                </div>
             </div>
         </div>
 

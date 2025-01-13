@@ -14,7 +14,9 @@
         </p>
     </div>
 
-    <!-- User's Contacts -->
+        <livewire:personal-vehicle-listing />
+
+        <!-- User's Contacts -->
     <div class="mb-6">
         <h2 class="text-xl font-semibold">Contacts</h2>
         <ul class="list-disc ml-5">

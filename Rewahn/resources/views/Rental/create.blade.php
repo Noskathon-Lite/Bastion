@@ -5,7 +5,7 @@
         </h2>
     </x-slot>
     <div class="py-12">
-        <livewire:forms.rental-form />
+        <livewire:forms.rental-form :vehicle_id=1 />
     </div>
 
 </x-app-layout>

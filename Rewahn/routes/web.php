@@ -43,4 +43,4 @@ Route::delete('vehicleDamage/delete/{id}', function ($id) {
 })->name('damage.delete');
 
 
-Route::view('vehicle/rent', 'Rental.create')->name('vehicle-rent');
+Route::view('rent', 'Rental.create')->name('rent.index');

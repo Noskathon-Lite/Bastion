@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RentalController;
 use App\Livewire\Show\VehicleView;
 use App\Models\Vehicle;
 
