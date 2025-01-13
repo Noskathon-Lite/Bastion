@@ -5,7 +5,7 @@
         </h2>
     </x-slot>
     <div class="py-12">
-        <livewire:forms.vehicle-category-form />
+        <livewire:forms.vehicle-category-edit-form />
     </div>
     <div class="py-4">
         <a href="{{ route('vehicle-category.viewall') }}" class="btn btn-primary">

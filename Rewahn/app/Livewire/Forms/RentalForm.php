@@ -2,6 +2,9 @@
 
 namespace App\Livewire\Forms;
 
+use App\Models\Rental;
+use App\Models\User;
+use App\Models\Vehicle;
 use Livewire\Component;
 
 class RentalForm extends Component

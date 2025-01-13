@@ -5,12 +5,10 @@
     @endif
 
     <form wire:submit.prevent="update">
-        <div class="mb-3">
-            <label for="user_id" class="form-label">User ID</label>
-            <input type="number" id="user_id" wire:model="user_id" class="form-control">
-            @error('user_id') <span class="text-danger">{{ $message }}</span> @enderror
+        <div>
+            <input type="hidden" id="user_id" wire:model="user_id">
+            @error('user_id') <span class="error">{{ $message }}</span> @enderror
         </div>
-
         <div class="mb-3">
             <label for="category_id" class="form-label">Category</label>
             <select id="category_id" wire:model="category_id" class="form-control">
@@ -34,11 +32,6 @@
             @error('description') <span class="text-danger">{{ $message }}</span> @enderror
         </div>
 
-        <div class="mb-3">
-            <label for="base_price" class="form-label">Base Price</label>
-            <input type="number" step="0.01" id="base_price" wire:model="base_price" class="form-control">
-            @error('base_price') <span class="text-danger">{{ $message }}</span> @enderror
-        </div>
 
         <div class="mb-3">
             <label for="daily_rate" class="form-label">Daily Rate</label>
