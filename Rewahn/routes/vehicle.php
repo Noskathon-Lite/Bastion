@@ -1,8 +1,9 @@
 <?php
 
+use App\Livewire\Show\VehicleView;
 use App\Models\Vehicle;
 
-Route::view('vehicle', 'vehicle.create')->name('vehicle');
+Route::view('vehicle/view', 'vehicle.create')->name('vehicle.create');
 Route::view('vehicle/edit/{id}', 'vehicle.edit')->name('vehicle.edit');
 Route::get('vehicle/view/{id}', function ($id) {
     // Find the vehicle by ID or show a 404 page if not found
@@ -21,10 +22,12 @@ Route::delete('vehicle/delete/{id}', function ($id) {
     // Redirect back with a success message
     return redirect()->route('vehicle', $id)->with('success', 'vehicle deleted successfully.');
 })->name('vehicle.delete');
-Route::get('vehicle/view', function () {
+/*Route::get('vehicle/view', function () {
     // Fetch all vehicles
     $vehicles = Vehicle::all();
 
     // Pass vehicles to the view
     return view('vehicle.view', compact('vehicles'));
-})->name('vehicle.viewall');
+})->name('vehicle.viewall');*/
+
+Route::get('vehicle', VehicleView::class)->name('vehicle.index');
