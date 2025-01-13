@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl  text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('vehicle view') }}
+        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+            {{ __('Vehicle View') }}
         </h2>
     </x-slot>
 
@@ -23,6 +23,70 @@
             <p><strong>Created At:</strong> {{ $vehicle->created_at->format('Y-m-d H:i:s') }}</p>
             <p><strong>Updated At:</strong> {{ $vehicle->updated_at->format('Y-m-d H:i:s') }}</p>
         </div>
+
+        <!-- Vehicle Images Section -->
+        <div class="card-body">
+            <h3>Vehicle Images</h3>
+            @if($vehicle->images)
+                <div class="row">
+                    @foreach(json_decode($vehicle->images) as $image)
+                        <div class="col-md-3">
+                            <img src="{{ asset('storage/' . $image) }}" alt="Vehicle Image" class="img-fluid rounded mb-3">
+                        </div>
+                    @endforeach
+                </div>
+            @else
+                <p>No images available for this vehicle.</p>
+            @endif
+        </div>
+
+        <!-- Vehicle Damages Section -->
+        <div class="card-body">
+            <h3>Vehicle Damages</h3>
+            @if($vehicle->damages->count())
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Description</th>
+                            <th>Status</th>
+                            <th>Reported By</th>
+                            <th>Images</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($vehicle->damages as $damage)
+                            <tr>
+                                <td>{{ $damage->id }}</td>
+                                <td>{{ $damage->description }}</td>
+                                <td>{{ ucfirst($damage->status) }}</td>
+                                <td>{{ $damage->user->name ?? 'N/A' }}</td>
+                                <td>
+                                    @if($damage->images)
+                                        @foreach(json_decode($damage->images) as $damageImage)
+                                            <img src="{{ asset('storage/' . $damageImage) }}" alt="Damage Image" class="img-thumbnail" width="50">
+                                        @endforeach
+                                    @else
+                                        <p>No images</p>
+                                    @endif
+                                </td>
+                                <td>
+                                    <form action="{{ route('damage.delete', $damage->id) }}" method="POST" style="display:inline;">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            @else
+                <p>No damages reported for this vehicle.</p>
+            @endif
+        </div>
+
         <div class="card-footer">
             <a href="{{ url()->previous() }}" class="btn btn-secondary">Back</a>
 
@@ -32,11 +96,16 @@
                 @method('DELETE')
                 <button type="submit" class="btn btn-danger">Delete</button>
             </form>
-            <form action="{{ route('vehicle.edit', $vehicle->id) }}"  style="display:inline;">
+
+            <!-- Edit Button -->
+            <form action="{{ route('vehicle.edit', $vehicle->id) }}" style="display:inline;">
                 @csrf
-                <button type="submit" class="btn btn-danger">EDIT</button>
+                <button type="submit" class="btn btn-primary">Edit</button>
             </form>
         </div>
+    </div>
+</x-app-layout>
+
     </div>
 
 </x-app-layout>
