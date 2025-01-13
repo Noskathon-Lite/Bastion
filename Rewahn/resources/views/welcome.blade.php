@@ -12,9 +12,9 @@
 
         <!-- Styles -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
-
+        @vite('resources/css/stylewelcome.css')
          <!-- Link the CSS file -->
-    <link rel="stylesheet" href="./css/Style.css">
+
     </head>
     <body class="antialiased font-sans">
         <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
@@ -61,9 +61,7 @@
     <p>"Your Next Escape Starts Here!
         </p><div id="nextline">Your Perfect Vehicle with</div>  <div class="rawahn">Rewahn</div>
 
-</div><img src="/storage/app/public/Images/home/ed-259-270914-unsplash.jpg" class="img" alt="scenario">
-
-
+</div><img src="{{ asset('storage/' . 'Images/home/ed-259-270914-unsplash.jpg') }}" alt="Image">
         <!-- Vehicle Listing Section -->
         <section class="vehicle-listing" id="rent">
             <h1 class="section-title">Available Vehicles</h1>
