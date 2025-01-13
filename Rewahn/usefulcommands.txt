@@ -11,3 +11,29 @@ php artisan ide-helper:generate
 Route::middleware(['auth'])->group(function () {
     Route::get('/vehicle-damages', \App\Http\Livewire\VehicleDamage::class)->name('vehicle-damages');
 });
+
+
+public function approveRequest($requestId)
+{
+    $request = \App\Models\Rental::find($requestId);
+
+    if ($request) {
+        $request->update(['status' => 'approved']);
+        session()->flash('message', 'Request approved.');
+    }
+}
+
+public function declineRequest($requestId)
+{
+    $request = \App\Models\Rental::find($requestId);
+
+    if ($request) {
+        $request->update(['status' => 'declined']);
+        session()->flash('message', 'Request declined.');
+    }
+}
+
+
+use App\Http\Livewire\Dashboard;
+
+Route::get('/dashboard', Dashboard::class)->name('dashboard')->middleware('auth');
