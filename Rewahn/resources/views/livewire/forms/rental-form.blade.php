@@ -59,6 +59,11 @@
             <label for="status" class="text-lg font-semibold text-gray-700 dark:text-gray-300">Status</label>
             <select id="status" wire:model="status" class="form-control mt-2 p-2 border border-gray-300 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500" @if($vehicle && $vehicle->user_id !== auth()->id()) disabled @endif>
                 <option value="pending">Pending</option>
+                <option value="confirmed">Confirmed</option>
+                <option value="active">Active</option>
+                <option value="completed">Completed</option>
+                <option value="cancelled">Cancelled</option>
+                <option value="disputed">Disputed</option>
             </select>
             @error('status')
             <span class="text-red-600 text-sm">{{ $message }}</span>

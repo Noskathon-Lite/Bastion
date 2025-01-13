@@ -24,6 +24,11 @@ class DatabaseSeeder extends Seeder
             'email' => 'user@example.com',
             'password' => bcrypt('usertest'),
         ]);
+        User::factory()->create([
+            'name' => 'user test',
+            'email' => 'user2@example.com',
+            'password' => bcrypt('user2test'),
+        ]);
 
         $this->call(VehicleCategorySeeder::class);
 
