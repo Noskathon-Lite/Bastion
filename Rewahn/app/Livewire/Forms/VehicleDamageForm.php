@@ -2,34 +2,37 @@
 
 namespace App\Livewire\Forms;
 
+use App\Models\VehicleDamage;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class VehicleDamageForm extends Component
 {
     use WithFileUploads;
 
-    public $vehicleDamages, $vehicle_id, $user_id, $description, $status = 'pending', $images = [];
+    public $vehicleDamages, $vehicle_id, $description, $status = 'pending', $images = [];
     public $damageId; // For edit mode
     public $showForm = false;
 
     protected $rules = [
-        'vehicle_id' => 'required|exists:vehicles,id',
-        'user_id' => 'required|exists:users,id',
         'description' => 'required|string',
         'status' => 'required|in:pending,verified,resolved',
         'images.*' => 'image|max:2048', // Validate images
     ];
 
+    public function mount($vehicle_id)
+    {
+        $this->vehicle_id = $vehicle_id; // Assign vehicle ID on initialization
+    }
+
     public function render()
     {
-        $this->vehicleDamages = VehicleDamage::with('vehicle')->latest()->get();
-        return view('livewire.vehicle-damage');
+        $this->vehicleDamages = VehicleDamage::where('vehicle_id', $this->vehicle_id)->latest()->get();
+        return view('livewire.forms.vehicle-damage-form');
     }
 
     public function resetForm()
     {
-        $this->vehicle_id = '';
-        $this->user_id = '';
         $this->description = '';
         $this->status = 'pending';
         $this->images = [];
@@ -50,11 +53,7 @@ class VehicleDamageForm extends Component
         // Handle image upload
         $storedImages = [];
         foreach ($this->images as $image) {
-            $path = $image->storeAs(
-                'images/vehicle_damages/' . auth()->id(),
-                time() . '_' . $image->getClientOriginalName(),
-                'public'
-            );
+            $path = $image->store('images/vehicle_damages/' . auth()->id(), 'public');
             $storedImages[] = $path;
         }
 
@@ -62,7 +61,7 @@ class VehicleDamageForm extends Component
             ['id' => $this->damageId],
             [
                 'vehicle_id' => $this->vehicle_id,
-                'user_id' => $this->user_id,
+                'user_id' => auth()->id(),
                 'description' => $this->description,
                 'status' => $this->status,
                 'images' => json_encode($storedImages),
@@ -77,11 +76,9 @@ class VehicleDamageForm extends Component
     {
         $damage = VehicleDamage::findOrFail($id);
         $this->damageId = $damage->id;
-        $this->vehicle_id = $damage->vehicle_id;
-        $this->user_id = $damage->user_id;
         $this->description = $damage->description;
         $this->status = $damage->status;
-        $this->images = []; // New uploads only
+        $this->images = []; // Clear image input for new uploads
         $this->showForm = true;
     }
 
@@ -91,10 +88,5 @@ class VehicleDamageForm extends Component
         $damage->delete();
 
         session()->flash('message', 'Vehicle Damage Deleted Successfully.');
-    }
-
-    public function render()
-    {
-        return view('livewire.forms.vehicle-damage-form');
     }
 }
