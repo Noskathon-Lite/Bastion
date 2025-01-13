@@ -36,13 +36,15 @@
                 List
             </button>
         </div>
+        <a href="{{ route('vehicle.create') }}" class="btn btn-primary mb-4">
+            Create Vehicle
+        </a>
     </div>
 
     <!-- vehicle List -->
     <div class="container mx-auto">
-        <a href="{{ route('vehicle.create') }}" class="btn btn-primary mb-4">
-            Create Vehicle
-        </a>
+
+
         <h3 class="text-2xl font-bold mb-4">Vehicles</h3>
 
         <!-- Dynamic Layout -->
@@ -60,3 +62,4 @@
         </div>
     </div>
 </div>
+

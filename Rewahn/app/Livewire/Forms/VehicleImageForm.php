@@ -2,11 +2,14 @@
 
 namespace App\Livewire\Forms;
 
+use App\Models\Vehicle;
+use App\Models\VehicleImage;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class VehicleImageForm extends Component
 {
- 
+
     use WithFileUploads;
 
     public $vehicle_id;
@@ -31,7 +34,7 @@ class VehicleImageForm extends Component
         $uploadedPaths = [];
         foreach ($this->images as $image) {
             $path = $image->storeAs(
-                'images/vehicles/' . $this->vehicle_id,
+                'Images/vehicles/' . $this->vehicle_id,
                 uniqid() . '.' . $image->getClientOriginalExtension(),
                 'public'
             );
@@ -40,7 +43,7 @@ class VehicleImageForm extends Component
 
         VehicleImage::create([
             'vehicle_id' => $this->vehicle_id,
-            'image_path' => $uploadedPaths,
+            'image_path' => json_encode($uploadedPaths),
         ]);
 
         session()->flash('message', 'Images uploaded successfully.');

@@ -5,6 +5,7 @@
         </h2>
     </x-slot>
     <div class="py-12">
+     <livewire:forms.vehicle-image-form />
     <livewire:forms.vehicle-form />
     </div>
 

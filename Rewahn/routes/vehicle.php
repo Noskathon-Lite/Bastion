@@ -3,14 +3,14 @@
 use App\Livewire\Show\VehicleView;
 use App\Models\Vehicle;
 
-Route::view('vehicle/view', 'vehicle.create')->name('vehicle.create');
+Route::view('vehicle/create', 'Vehicle.create')->name('vehicle.create');
 Route::view('vehicle/edit/{id}', 'vehicle.edit')->name('vehicle.edit');
 Route::get('vehicle/view/{id}', function ($id) {
     // Find the vehicle by ID or show a 404 page if not found
     $vehicle = Vehicle::findOrFail($id);
 
     // Pass the vehicle data to the view
-    return view('vehicle.vehicle-view', compact('vehicle'));
+    return view('Vehicle.vehicle-view', compact('vehicle'));
 })->name('vehicle.view');
 Route::delete('vehicle/delete/{id}', function ($id) {
     // Find the vehicle by ID or show a 404 page if not found
